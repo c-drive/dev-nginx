@@ -1,0 +1,6 @@
+8701c33a4747dc4b11f5297ca3c6b15d  usr/bin/curl
+5b520d429f0b08df2f540e55f34240b6  usr/share/doc/curl/changelog.Debian.gz
+0a7d15f1f7beb98774b69a1e88bc2119  usr/share/doc/curl/changelog.gz
+c744365ef04a3e5362c50f5b9d3fd7d4  usr/share/doc/curl/copyright
+44ba31c9dceb262766e093e2bfd9f539  usr/share/man/man1/curl.1.gz
+5af0593e6eaf8d1e3bd86b0092ea7009  usr/share/zsh/vendor-completions/_curl
