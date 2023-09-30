@@ -40,8 +40,8 @@ env:
   CONTAINER_NAME: nginx           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
 
-#permissions:
-#  contents: read
+permissions:
+  contents: read
 
 jobs:
   deploy:
@@ -66,10 +66,8 @@ jobs:
 
     - name: Login to GitHub with Token for GHCR
       id: login-git-ghcr
-      with: 
-        ghcr: ${{ secrets.ghcr }}
       run: |
-        docker login ghcr.io -u c-drive -p $ghcr
+        docker login ghcr.io -u c-drive -p ${{ secrets.ghcr }}
 
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
