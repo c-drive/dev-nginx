@@ -64,6 +64,13 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
 
+    - name: Login to GitHub with Token for GHCR
+      id: login-git-ghcr
+      with: 
+        ghcr: ${{ secrets.ghcr }}
+      run: |
+        docker login ghcr.io -u c-drive -p $ghcr
+
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
       env:
