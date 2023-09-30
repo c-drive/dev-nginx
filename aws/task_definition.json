@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-west-1:718498237680:task-definition/nginx-definition:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-west-1:718498237680:task-definition/nginx-definition:2",
     "containerDefinitions": [
         {
             "name": "nginx",
-            "image": "718498237680.dkr.ecr.us-west-1.amazonaws.com/dev-nginx",
+            "image": "public.ecr.aws/docker/library/nginx:alpine",
             "cpu": 0,
             "portMappings": [
                 {
@@ -43,7 +43,7 @@
     "taskRoleArn": "arn:aws:iam::718498237680:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::718498237680:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -54,16 +54,10 @@
             "name": "ecs.capability.execution-role-awslogs"
         },
         {
-            "name": "com.amazonaws.ecs.capability.ecr-auth"
-        },
-        {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
         },
         {
             "name": "com.amazonaws.ecs.capability.task-iam-role"
-        },
-        {
-            "name": "ecs.capability.execution-role-ecr-pull"
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
@@ -89,7 +83,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-09-30T00:38:30.781Z",
+    "registeredAt": "2023-09-30T04:19:03.301Z",
     "registeredBy": "arn:aws:iam::718498237680:root",
     "tags": []
 }
